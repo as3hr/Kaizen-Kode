@@ -15,11 +15,9 @@ class OtherMessage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           5.horizontalSpace,
-          const Align(
-            child: CircleAvatar(
-              radius: 15,
-              backgroundImage: AssetImage(AppImages.user2),
-            ),
+          const CircleAvatar(
+            radius: 15,
+            backgroundImage: AssetImage(AppImages.user1),
           ),
           5.horizontalSpace,
           Container(

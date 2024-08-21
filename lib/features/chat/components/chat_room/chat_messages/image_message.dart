@@ -19,7 +19,7 @@ class ImageMessage extends StatelessWidget {
           const Align(
             child: CircleAvatar(
               radius: 15,
-              backgroundImage: AssetImage(AppImages.user2),
+              backgroundImage: AssetImage(AppImages.user1),
             ),
           ),
           5.horizontalSpace,

@@ -18,7 +18,8 @@ class TopicChips extends StatefulWidget {
 
 class _TopicChipsState extends State<TopicChips> {
   final topics = [
-    'Tech',
+    'climate change & sustainability',
+    'Conscious Art',
     'Travel',
     'Health',
     'Economy',

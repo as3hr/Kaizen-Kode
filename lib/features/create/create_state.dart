@@ -4,7 +4,9 @@ import 'package:kaizen_code/domain/entities/post.dart';
 class CreateState {
   final Post post;
   List<String> selectedTopic;
-  CreateState({required this.post, this.selectedTopic = const ['Tech']});
+  CreateState(
+      {required this.post,
+      this.selectedTopic = const ['climate change & sustainability']});
 
   copyWith({Post? post, List<String>? selectedTopic}) => CreateState(
         post: post ?? this.post,
@@ -18,6 +20,6 @@ class CreateState {
           date: '',
           content: Content(text: ''),
         ),
-        selectedTopic: ['Tech'],
+        selectedTopic: ['climate change & sustainability'],
       );
 }

@@ -12,30 +12,34 @@ class ChatMessages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        child: ListView.builder(
-            reverse: true,
-            itemCount: 20,
-            itemBuilder: (context, index) {
-              if (index % 3 == 0 && index != 0) {
-                return Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    CylindricalContainer(
-                      color: AppColor.blackText,
-                      text: 'Today',
-                      onChanged: () {},
-                      borderColor: AppColor.blackText,
-                      textColor: AppColor.white,
-                    ),
-                  ],
-                );
-              }
-              return index.isEven
-                  ? const MyMessage()
-                  : index % 1 == 0 && index != 0
-                      ? const ImageMessage()
-                      : const OtherMessage();
-            }));
+      child: ListView.builder(
+        reverse: true,
+        itemCount: 20,
+        itemBuilder: (context, index) {
+          if (index % 3 == 0 && index != 0) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CylindricalContainer(
+                  color: AppColor.blackText,
+                  text: 'Today',
+                  onChanged: () {},
+                  borderColor: AppColor.blackText,
+                  textColor: AppColor.white,
+                ),
+              ],
+            );
+          }
+          if (index.isEven) {
+            return const MyMessage();
+          }
+          if (index % 2 == 1 && index % 3 != 0) {
+            return index % 4 == 1 ? const ImageMessage() : const OtherMessage();
+          }
+          return const SizedBox.shrink();
+        },
+      ),
+    );
   }
 }
