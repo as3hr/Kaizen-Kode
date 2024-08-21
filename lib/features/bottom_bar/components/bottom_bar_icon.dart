@@ -37,13 +37,16 @@ class _BottomBarIconState extends State<BottomBarIcon> {
         builder: (context, state) {
           bool isSelected = state.currentIndex == widget.index;
           final color = isSelected ? AppColor.green : AppColor.lightBlack;
+          final image = isSelected
+              ? widget.item.selectedImage ?? widget.item.unSelectedImage
+              : widget.item.unSelectedImage;
           return GestureDetector(
             onTap: () => cubit.updateIndex(widget.index),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset(
-                  widget.item.image,
+                  image,
                   color: color,
                 ),
                 Text(widget.item.title,

@@ -13,7 +13,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(state.copyWith(postList: posts));
   }
 
-  void createPost(Post post) {
+  void addPost(Post post) {
     state.postList.insert(0, post);
     emit(state.copyWith(postList: state.postList));
   }

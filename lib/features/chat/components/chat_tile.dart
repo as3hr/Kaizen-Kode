@@ -4,6 +4,7 @@ import 'package:kaizen_code/domain/entities/user.dart';
 import 'package:kaizen_code/helpers/styles/app_images.dart';
 
 import '../../../helpers/styles/app_colors.dart';
+import '../../../helpers/styles/styles.dart';
 
 class ChatTile extends StatelessWidget {
   const ChatTile({super.key, required this.user});
@@ -29,13 +30,32 @@ class ChatTile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(user.name),
-                  Text(user.message),
+                  Text(
+                    user.name,
+                    style:
+                        Styles.boldStyle(fontSize: 16, color: AppColor.black1),
+                  ),
+                  Text(
+                    user.message,
+                    style: Styles.semiMediumStyle(
+                        fontSize: 14, color: AppColor.blackText),
+                  ),
+                  10.verticalSpace,
                   Row(
                     children: [
-                      Text(user.time),
+                      Text(
+                        user.time,
+                        style: Styles.semiMediumStyle(
+                            fontSize: 12, color: AppColor.blackText),
+                      ),
                       const Spacer(),
-                      Image.asset(AppImages.message),
+                      Text(
+                        '5',
+                        style: Styles.mediumStyle(
+                            fontSize: 14, color: AppColor.blackText),
+                      ),
+                      5.horizontalSpace,
+                      Image.asset(AppImages.chatMessage),
                     ],
                   )
                 ],

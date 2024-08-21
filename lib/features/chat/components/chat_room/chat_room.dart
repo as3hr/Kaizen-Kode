@@ -4,6 +4,8 @@ import 'package:kaizen_code/features/chat/components/chat_room/chat_field.dart';
 import 'package:kaizen_code/features/chat/components/chat_room/chat_room_cubit.dart';
 import 'package:kaizen_code/helpers/styles/app_images.dart';
 
+import '../../../../helpers/styles/app_colors.dart';
+import '../../../../helpers/styles/styles.dart';
 import 'chat_messages/chat_messages.dart';
 
 class ChatRoom extends StatefulWidget {
@@ -29,7 +31,7 @@ class _ChatRoomState extends State<ChatRoom> {
           children: [
             10.verticalSpace,
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(12),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -39,7 +41,11 @@ class _ChatRoomState extends State<ChatRoom> {
                     },
                     child: Image.asset(AppImages.backArrow),
                   ),
-                  const Text('BRUNO PHAM'),
+                  Text(
+                    'BRUNO PHAM',
+                    style:
+                        Styles.boldStyle(fontSize: 16, color: AppColor.black1),
+                  ),
                   GestureDetector(
                     onTap: () {},
                     child: Image.asset(AppImages.setting),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kaizen_code/helpers/styles/app_colors.dart';
+import 'package:kaizen_code/helpers/styles/styles.dart';
 
+import '../../helpers/styles/app_images.dart';
 import 'chat_cubit.dart';
 import 'chat_state.dart';
 import 'components/chat_tile.dart';
@@ -33,12 +35,19 @@ class _ChatScreenState extends State<ChatScreen> {
             builder: (context, state) {
               return Column(
                 children: [
-                  const Row(
-                    children: [
-                      Text('Message'),
-                      Spacer(),
-                      Icon(Icons.add, color: AppColor.black1),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Message',
+                          style: Styles.boldStyle(
+                              fontSize: 20, color: AppColor.black1),
+                        ),
+                        const Spacer(),
+                        Image.asset(AppImages.add),
+                      ],
+                    ),
                   ),
                   Expanded(
                       child: ListView.builder(

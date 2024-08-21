@@ -26,7 +26,8 @@ class Feed extends StatelessWidget {
                 10.horizontalSpace,
                 Text(
                   'Feeds',
-                  style: Styles.boldStyle(fontSize: 20, color: AppColor.black1),
+                  style: Styles.semiBoldStyle(
+                      fontSize: 20, color: AppColor.black1),
                 ),
                 const Spacer(),
                 GestureDetector(
@@ -50,6 +51,7 @@ class Feed extends StatelessWidget {
                   final post = state.postList[index];
                   return PostContainer(
                     post: post,
+                    index: index,
                     showBookmark: index.isOdd ? true : false,
                   );
                 },

@@ -5,6 +5,8 @@ class AppImages {
   static const chat = '${baseDir}chat.png';
   static const search = '${baseDir}search.png';
   static const create = '${baseDir}create.png';
+  static const greenHome = '${baseDir}green_home.png';
+  static const greenChat = '${baseDir}green_chat.png';
   static const bell = '${baseDir}bell.png';
   static const filter = '${baseDir}filter.png';
   static const heart = '${baseDir}heart.png';
@@ -24,4 +26,9 @@ class AppImages {
   static const user1 = '${baseDir}user1.png';
   static const user2 = '${baseDir}user2.png';
   static const user3 = '${baseDir}user3.png';
+  static const messageImage = '${baseDir}message_image.png';
+  static const james = '${baseDir}james.png';
+  static const bigjames = '${baseDir}bigjames.png';
+  static const add = '${baseDir}add.png';
+  static const chatMessage = '${baseDir}chat_message.png';
 }

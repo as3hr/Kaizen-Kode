@@ -29,7 +29,9 @@ class CreateHeader extends StatelessWidget {
                 },
                 child: Image.asset(AppImages.backArrow),
               ),
-              const Text('Create Post'),
+              Text('Create Post',
+                  style: Styles.semiBoldStyle(
+                      fontSize: 16, color: AppColor.black1)),
               GestureDetector(
                 onTap: () {
                   cubit.createPost(context);
@@ -42,8 +44,8 @@ class CreateHeader extends StatelessWidget {
                   ),
                   child: Center(
                       child: Text('Post',
-                          style: Styles.mediumStyle(
-                            fontSize: 12,
+                          style: Styles.semiBoldStyle(
+                            fontSize: 15,
                             color: AppColor.white,
                           ))),
                 ),
@@ -67,9 +69,9 @@ class CreateHeader extends StatelessWidget {
                       onChanged: () {
                         onChanged.call(PostType.public);
                       },
-                      textColor:
-                          isPublic ? AppColor.white : AppColor.lightBlack,
-                      borderColor: isPublic ? AppColor.green : AppColor.black1,
+                      textColor: isPublic ? AppColor.white : AppColor.blackText,
+                      borderColor:
+                          isPublic ? AppColor.green : AppColor.blackText,
                     ),
                   ),
                   Expanded(
@@ -79,9 +81,10 @@ class CreateHeader extends StatelessWidget {
                       onChanged: () {
                         onChanged.call(PostType.business);
                       },
-                      textColor: isBusiness ? AppColor.white : AppColor.black1,
+                      textColor:
+                          isBusiness ? AppColor.white : AppColor.blackText,
                       borderColor:
-                          isBusiness ? AppColor.green : AppColor.black1,
+                          isBusiness ? AppColor.green : AppColor.blackText,
                     ),
                   ),
                 ],

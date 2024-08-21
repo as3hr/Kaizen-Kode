@@ -57,8 +57,8 @@ class _CreateScreenState extends State<CreateScreen> {
                             borderSide: BorderSide(color: AppColor.transparent),
                           ),
                           hintText: 'Type Something',
-                          hintStyle: Styles.lightStyle(
-                              fontSize: 12, color: AppColor.lightBlack)),
+                          hintStyle: Styles.semiMediumStyle(
+                              fontSize: 14, color: AppColor.black1)),
                     ),
                   ),
                   const Spacer(),

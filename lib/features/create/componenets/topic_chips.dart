@@ -47,8 +47,8 @@ class _TopicChipsState extends State<TopicChips> {
                 setState(() {});
                 widget.topics.call(selectedTopic);
               },
-              textColor: isSelected ? AppColor.white : AppColor.black1,
-              borderColor: isSelected ? AppColor.green : AppColor.black1,
+              textColor: isSelected ? AppColor.white : AppColor.blackText,
+              borderColor: isSelected ? AppColor.green : AppColor.blackText,
             );
           }).toList()),
     );

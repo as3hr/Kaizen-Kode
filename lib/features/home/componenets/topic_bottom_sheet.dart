@@ -60,22 +60,28 @@ class _TopicBottomSheetState extends State<TopicBottomSheet> {
                           currentIndex = index;
                         });
                       },
-                      child: Container(
-                        color: currentIndex == index
-                            ? AppColor.green
-                            : AppColor.white,
-                        child: ListTile(
-                          leading: Image.asset(AppImages.bottomBarTopic,
-                              color: currentIndex == index
-                                  ? AppColor.white
-                                  : AppColor.lightBlack),
-                          title: Text(
-                            topics[index],
-                            style: Styles.mediumStyle(
-                              fontSize: 12,
-                              color: currentIndex == index
-                                  ? AppColor.white
-                                  : AppColor.lightBlack,
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: currentIndex == index
+                                ? AppColor.green
+                                : AppColor.white,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: ListTile(
+                            leading: Image.asset(AppImages.bottomBarTopic,
+                                color: currentIndex == index
+                                    ? AppColor.white
+                                    : AppColor.lightBlack),
+                            title: Text(
+                              topics[index],
+                              style: Styles.mediumStyle(
+                                fontSize: 16,
+                                color: currentIndex == index
+                                    ? AppColor.white
+                                    : AppColor.black1,
+                              ),
                             ),
                           ),
                         ),

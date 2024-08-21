@@ -25,7 +25,7 @@ class CylindricalContainer extends StatelessWidget {
           onChanged.call();
         },
         child: Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.fromLTRB(15, 8, 15, 8),
           decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(20),

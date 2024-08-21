@@ -11,36 +11,40 @@ import '../../search/search_page.dart';
 class BottomBarItem {
   Widget page;
   String title;
-  String image;
+  String? selectedImage;
+  String unSelectedImage;
 
   BottomBarItem({
-    required this.image,
+    required this.unSelectedImage,
+    this.selectedImage,
     required this.page,
     required this.title,
   });
   static final items = [
     BottomBarItem(
-      image: AppImages.home,
+      unSelectedImage: AppImages.home,
+      selectedImage: AppImages.greenHome,
       page: HomeScreen(cubit: getIt()),
       title: 'Home',
     ),
     BottomBarItem(
-      image: AppImages.search,
+      unSelectedImage: AppImages.search,
       page: const SearchPage(),
       title: 'Search',
     ),
     BottomBarItem(
-      image: AppImages.create,
+      unSelectedImage: AppImages.create,
       page: CreateScreen(cubit: getIt()),
       title: 'Create',
     ),
     BottomBarItem(
-      image: AppImages.chat,
+      unSelectedImage: AppImages.chat,
+      selectedImage: AppImages.greenChat,
       page: ChatScreen(cubit: getIt()),
       title: 'Chat',
     ),
     BottomBarItem(
-      image: AppImages.profile,
+      unSelectedImage: AppImages.profile,
       page: const ProfileScreen(),
       title: 'Profile',
     ),

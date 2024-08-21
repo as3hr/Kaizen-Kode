@@ -25,53 +25,9 @@ class Styles {
     );
   }
 
-  // static TextStyle boldStyle({required double fontSize, required Color color}) {
-  //   return TextStyle(
-  //     fontWeight: FontWeight.w900,
-  //     fontSize: fontSize,
-  //     color: color,
-  //   );
-  // }
-
-  // static TextStyle semiBoldStyle(
-  //     {required double fontSize, required Color color}) {
-  //   return TextStyle(
-  //     fontWeight: FontWeight.w700,
-  //     fontSize: fontSize,
-  //     color: color,
-  //   );
-  // }
-
-  // static TextStyle mediumStyle(
-  //     {required double fontSize, required Color color}) {
-  //   return TextStyle(
-  //     fontWeight: FontWeight.w600,
-  //     fontSize: fontSize,
-  //     color: color,
-  //   );
-  // }
-
-  // static TextStyle semiMediumStyle(
-  //     {required double fontSize, required Color color}) {
-  //   return TextStyle(
-  //     fontWeight: FontWeight.w500,
-  //     fontSize: fontSize,
-  //     color: color,
-  //   );
-  // }
-
-  // static TextStyle lightStyle(
-  //     {required double fontSize, required Color color}) {
-  //   return TextStyle(
-  //     fontWeight: FontWeight.w300,
-  //     fontSize: fontSize,
-  //     color: color,
-  //   );
-  // }
-
   static TextStyle boldStyle({required double fontSize, required Color color}) {
     return GoogleFonts.nunito(
-      fontWeight: FontWeight.w900,
+      fontWeight: FontWeight.w800,
       fontSize: fontSize,
       color: color,
     );

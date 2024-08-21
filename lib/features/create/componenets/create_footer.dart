@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kaizen_code/features/create/componenets/topic_chips.dart';
 import 'package:kaizen_code/features/create/create_state.dart';
 import 'package:kaizen_code/helpers/styles/app_colors.dart';
+import 'package:kaizen_code/helpers/styles/styles.dart';
 
 import '../../../helpers/styles/app_images.dart';
 import '../create_cubit.dart';
@@ -24,9 +25,13 @@ class CreateFooter extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 10),
-                  child: Text('Topic'),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text(
+                    'Topic',
+                    style: Styles.semiMediumStyle(
+                        fontSize: 14, color: AppColor.black1),
+                  ),
                 ),
                 TopicChips(
                   topics: (topics) {

@@ -22,6 +22,7 @@ class CreateCubit extends Cubit<CreateState> {
       showToast('No Topic Selected!', context);
     } else {}
     postRepository.createPost(state.post);
+    emit(state.copyWith(post: state.post));
     navigation.pop();
   }
 

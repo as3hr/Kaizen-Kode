@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kaizen_code/helpers/styles/styles.dart';
 
 import '../../../../../../helpers/styles/app_colors.dart';
 import '../../../../helpers/styles/app_images.dart';
@@ -17,7 +18,7 @@ class ChatField extends StatelessWidget {
           child: Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 20),
                 child: GestureDetector(
                   onTap: () async {
                     await cubit.showOptions(context);
@@ -31,14 +32,16 @@ class ChatField extends StatelessWidget {
                       minLines: 1,
                       cursorColor: Theme.of(context).colorScheme.onSecondary,
                       keyboardType: TextInputType.multiline,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
+                        contentPadding: const EdgeInsets.all(20),
                         hintText: 'Type Something',
-                        hintStyle: TextStyle(color: AppColor.lightBlack),
-                        focusedBorder: OutlineInputBorder(
+                        hintStyle: Styles.mediumStyle(
+                            fontSize: 14, color: AppColor.black1),
+                        focusedBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                           color: AppColor.transparent,
                         )),
-                        enabledBorder: OutlineInputBorder(
+                        enabledBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                           color: AppColor.transparent,
                         )),

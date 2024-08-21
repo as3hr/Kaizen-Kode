@@ -60,7 +60,9 @@ class _HomeScreenState extends State<HomeScreen>
               indicatorSize: TabBarIndicatorSize.tab,
               labelPadding: const EdgeInsets.all(8),
               indicatorColor: AppColor.green,
-              labelStyle: Styles.boldStyle(fontSize: 14, color: AppColor.green),
+              unselectedLabelStyle:
+                  Styles.boldStyle(fontSize: 12, color: AppColor.blackText),
+              labelStyle: Styles.boldStyle(fontSize: 12, color: AppColor.green),
               controller: tabController,
               tabs: const [
                 Center(child: Text('Public Feed')),
