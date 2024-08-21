@@ -1,19 +1,6 @@
-// ignore_for_file: avoid_print, use_build_context_synchronously
 import 'package:kaizen_code/helpers/styles/app_colors.dart';
 import 'package:kaizen_code/helpers/styles/styles.dart';
-import 'package:kaizen_code/helpers/widgets/indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:loader_overlay/loader_overlay.dart';
-
-void loader(func, BuildContext context) {
-  context.loaderOverlay.show(widgetBuilder: (_) => const Indicator());
-  func.call();
-  if (context.mounted == true) {
-    Future.delayed(const Duration(seconds: 1), () {
-      context.loaderOverlay.hide();
-    });
-  }
-}
 
 Future<void> showToast(String message, BuildContext context) async {
   showDialog(

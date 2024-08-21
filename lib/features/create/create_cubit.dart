@@ -26,6 +26,15 @@ class CreateCubit extends Cubit<CreateState> {
     navigation.pop();
   }
 
+  void toggleTopic(String topic, bool isSelected) {
+    if (isSelected) {
+      state.selectedTopic.remove(topic);
+    } else {
+      state.selectedTopic.add(topic);
+    }
+    emit(state.copyWith(selectedTopic: state.selectedTopic));
+  }
+
   void changePostType(PostType postType) {
     emit(state.copyWith(post: state.post.copyWith(postType: postType)));
   }

@@ -35,20 +35,14 @@ dependencies:
   bloc: ^8.1.4
   flutter_bloc: ^8.1.6
   intl: ^0.19.0
-  fancy_shimmer_image: ^2.0.3
   flutter_screenutil: ^5.9.3
-  adaptive_theme: ^3.6.0
   gap: ^3.0.1
-  loader_overlay: ^4.0.1
   image_picker: ^1.1.2
-  shimmer: ^3.0.0
-  shared_preferences: ^2.3.1
   device_preview: ^1.2.0
   get_it: ^7.7.0
   dartz: ^0.10.1
   cached_network_image: ^3.4.0
   equatable: ^2.0.5
-  nested: ^1.0.0
   collection: ^1.18.0
 
 dev_dependencies:

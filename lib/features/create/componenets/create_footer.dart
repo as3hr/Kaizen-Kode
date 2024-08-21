@@ -34,6 +34,7 @@ class CreateFooter extends StatelessWidget {
                   ),
                 ),
                 TopicChips(
+                  cubit: cubit,
                   topics: (topics) {
                     state.post.topics = topics;
                   },
