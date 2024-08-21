@@ -1,4 +1,4 @@
-# kaizen_code
+# kaizen_kode
 
 A new Flutter project.
 
