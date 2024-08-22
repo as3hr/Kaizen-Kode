@@ -20,6 +20,8 @@ class BottomBarCubit extends Cubit<BottomBarState> {
   Future<void> onPopInvoked(bool didPop, BuildContext context) async {
     if (didPop) return;
     if (await showConfirmationDialog('Do you want to exit the app?', context) &&
-        context.mounted) navigation.pop();
+        context.mounted) {
+      // navigation.pop();
+    }
   }
 }

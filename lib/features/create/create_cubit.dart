@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kaizen_code/domain/repositories/post_repository.dart';
 import 'package:kaizen_code/features/create/create_navigator.dart';
-import 'package:kaizen_code/helpers/helpers.dart';
 import 'package:kaizen_code/domain/entities/post.dart';
 
 import 'create_state.dart';
@@ -18,9 +17,6 @@ class CreateCubit extends Cubit<CreateState> {
   final picker = ImagePicker();
 
   void createPost(BuildContext context) {
-    if (state.post.topics.isEmpty) {
-      showToast('No Topic Selected!', context);
-    } else {}
     postRepository.createPost(state.post);
     emit(state.copyWith(post: state.post));
     navigation.pop();

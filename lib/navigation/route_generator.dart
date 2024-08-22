@@ -17,30 +17,25 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       (settings.arguments ?? <String, dynamic>{}) as Map<String, dynamic>;
   switch (settings.name) {
     case RouteName.bottomBar:
-      return MaterialPageRoute(
-          builder: (context) => BottomBar(
-                cubit: getIt(),
-              ));
+      return getRoute(BottomBar(cubit: getIt()));
+
     case RouteName.profile:
-      return MaterialPageRoute(builder: (context) => const ProfileScreen());
+      return getRoute(const ProfileScreen());
 
     case RouteName.home:
-      return MaterialPageRoute(
-          builder: (context) => HomeScreen(cubit: getIt()));
+      return getRoute(HomeScreen(cubit: getIt()));
 
     case RouteName.chat:
-      return MaterialPageRoute(
-          builder: (context) => ChatScreen(cubit: getIt()));
+      return getRoute(ChatScreen(cubit: getIt()));
 
     case RouteName.chatRoom:
-      return MaterialPageRoute(builder: (context) => ChatRoom(cubit: getIt()));
+      return getRoute(ChatRoom(cubit: getIt()));
 
     case RouteName.search:
-      return MaterialPageRoute(builder: (context) => const SearchPage());
+      return getRoute(const SearchPage());
 
     case RouteName.create:
-      return MaterialPageRoute(
-          builder: (context) => CreateScreen(cubit: getIt()));
+      return getRoute(CreateScreen(cubit: getIt()));
 
     default:
       return MaterialPageRoute(
@@ -50,4 +45,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
                 ),
               ));
   }
+}
+
+PageRouteBuilder getRoute(Widget page) {
+  return PageRouteBuilder(
+    pageBuilder: (_, __, ___) => page,
+    transitionDuration: const Duration(milliseconds: 500),
+    transitionsBuilder: (_, a, __, c) => FadeTransition(opacity: a, child: c),
+  );
 }

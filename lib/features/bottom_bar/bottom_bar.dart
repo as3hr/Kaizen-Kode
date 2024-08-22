@@ -17,9 +17,9 @@ class BottomBar extends StatelessWidget {
         builder: (context, state) {
           return PopScope(
             canPop: false,
-            onPopInvoked: (didPop) async {
-              await cubit.onPopInvoked(didPop, context);
-            },
+            // onPopInvoked: (didPop) async {
+            // await cubit.onPopInvoked(didPop, context);
+            // },
             child: Scaffold(
               body: state.page,
               bottomNavigationBar: BottomBarContainer(cubit: getIt()),
