@@ -12,7 +12,7 @@
 ## Best Practices
 - **Separation of Concerns:** Each app layer has a distinct responsibility, keeping the codebase modular and maintainable.
 - **Dependency Injection:** All dependencies are injected using GetIt, following the inversion of control principle to make the code more testable.
-- **Clean UI:** The UI layer is kept simple, focusing on rendering data and responding to user interactions, while the business logic resides in the domain layer.
+- **Clean UI:** The UI layer is kept simple, focusing on rendering data and responding to user interactions.
 
 ## Responsiveness
 The UI has been designed to be responsive, ensuring proper layout on various screen sizes and orientations. The layout adjusts dynamically, offering a seamless experience across devices.
